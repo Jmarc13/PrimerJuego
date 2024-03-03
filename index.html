@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joc</title>
     <link rel="stylesheet" href="./assets/styles/index.css">
+    <script type="module" src="./js/main.js"></script>
 </head>
 <body>
     <div class="container">
@@ -13,11 +14,24 @@
             <img id="pistonCup" src="assets/img/piston.png" alt="">
             <img id="player" src="assets/img/cars.png" alt="">
             <img id="tree" src="assets/img/tree.png" alt="">
-            <script type="module" src="./js/main.js"></script>
+            
         </div>
-        <div>
+        <div class="container2">
+            <h2 id="dificulty"></h2>
             <h1 id="chronometer">00 : 00</h1>
-            <h2 id="message"></h2>
+            <h2 id="record"></h2>
+            <h2 id="pistonCupsCollected"></h2>
+            <div id="buttons">
+                <button id="reset">Tornar jugar</button>
+                <button id="instructions">Instruccions</button>
+                <button id="resetGame">Reiniciar records</button>
+            </div>
+            <div id="buttons">
+                <button id="easy">Fàcil</button>
+                <button  id="medium">Mitjà</button>
+                <button  id="hard">Difícil</button>
+            </div>
+            <h2 id="finished"></h2>
         </div>
     </div>
 </body>

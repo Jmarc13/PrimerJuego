@@ -2,10 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#canvas{
-    border:5px solid black;
+body {
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+}
+
+#canvas {
+    border: 5px solid black;
     top: 50%;
     left: 50%;
     transform: translate(-10%, -10%);
@@ -13,24 +19,118 @@
     max-height: 100%;
 }
 
-#player{
-    display: none;
-}
-#tree{
-    display: none;
-}
-#pistonCup{
+#player {
     display: none;
 }
 
-.container{
+#tree {
+    display: none;
+}
+
+#pistonCup {
+    display: none;
+}
+
+.container {
     display: grid;
     grid-template-columns: 3fr 1fr;
-}
-
-div{
     padding: 70px 0px 0px 70px;
 }
-.container1{
+
+.container1 {
     margin-left: 100px;
+    padding: 70px 0px 0px 70px;
+}
+
+.container2 {
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    margin-right: 100px;
+}
+
+#record {
+    background-color: #B12228;
+    color: white;
+    border-radius: 10px;
+    margin: 10px 10px 10px 10px;
+    padding: 20px 0px 20px 0px;
+}
+
+#pistonCupsCollected {
+    background-color: #F3CC64;
+    color: white;
+    border-radius: 10px;
+    margin: 10px 10px 10px 10px;
+    padding: 20px 0px 20px 0px;
+}
+
+#chronometer {
+    background-color: #12194A;
+    color: white;
+    border-radius: 10px;
+    margin: 10px 10px 10px 10px;
+    padding: 20px 0px 20px 0px;
+}
+
+#dificulty {
+    background-color: #12194A;
+    color: white;
+    border-radius: 10px;
+    margin: 10px 10px 10px 10px;
+    padding: 20px 0px 20px 0px;
+}
+
+#buttons {
+    background-color: #12194A;
+    color: white;
+    border-radius: 10px;
+    margin: 10px 10px 10px 10px;
+    padding: 20px 0px 20px 0px;
+}
+
+#easy {
+    background-color: green;
+    color: white;
+}
+
+#easy:hover {
+    background-color: rgb(0, 255, 0);
+}
+
+#medium {
+    background-color: yellow;
+}
+
+#medium:hover {
+    background-color: rgb(183, 183, 58);
+}
+
+#hard {
+    background-color: red;
+    color: white;
+}
+
+#hard:hover {
+    background-color: rgb(255, 134, 134);
+    color: white;
+}
+
+button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 650;
+    color: #333;
+}
+
+button:hover {
+    display: inline-block;
+    background-color: #B12228;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 650;
+    color: #333;
 }

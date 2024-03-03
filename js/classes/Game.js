@@ -22,14 +22,22 @@ export class Game {
 
     update() {
         this.player.update(this.input.keys);
-        if(this.player.score == this.numberPistonCups){
+        if (this.player.score == this.numberPistonCups) {
             this.chronometer.stopChronometer();
         }
-        if(!this.chronometer.stop){
+        if (!this.chronometer.stop) {
             this.chronometer.updateTime(this.playerHasMoved());
-        }else{
-            var message = document.getElementById('message');
-            message.innerHTML = "El teu record es "+this.chronometer.seconds +" seconds";
+        } else if(this.player.score == this.numberPistonCups && this.numberPistonCups != 0){
+            const recordSeconds = localStorage.getItem('recordSeconds');
+            const recordMinutes = localStorage.getItem('recordMinutes');
+            if (recordSeconds > this.chronometer.seconds) {
+                localStorage.setItem('recordMessage', this.chronometer.minutes + " minuts i " + this.chronometer.seconds + " segons");
+                localStorage.setItem('recordSeconds', this.chronometer.seconds);
+                localStorage.setItem('recordMinutes', this.chronometer.minutes);
+            }else if(recordSeconds == null && recordMinutes == null){
+                localStorage.setItem('recordSeconds', 99999);
+                localStorage.setItem('recordMinutes', 99999);
+            }
         }
 
     }
